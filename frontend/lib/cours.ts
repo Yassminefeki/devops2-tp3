@@ -25,7 +25,7 @@ export function formatDuration(minutes: number): string {
   }
   const hours = Math.floor(minutes / 60);
   const rest = minutes % 60;
-  return `${hours} h ${rest}`;
+  return rest === 0 ? `${hours} h` : `${hours} h ${rest}`;
 }
 
 // Minuscules et sans accents : « Déploiement » et « deploiement » se retrouvent
