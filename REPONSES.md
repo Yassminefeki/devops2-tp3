@@ -1,6 +1,6 @@
 # TP3 — Réponses
 
-**Binôme :** NOM Prénom — NOM Prénom
+Yassmine Feki
 
 > Répondez sous chaque question. Les mesures (durées, pourcentages) sont celles de **votre** machine.
 
