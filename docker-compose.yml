@@ -76,6 +76,7 @@ services:
     environment:
       # Appel serveur à serveur : on utilise le nom du service, pas "localhost"
       STRAPI_URL: http://strapi:1337
+      STRAPI_CLIENT_PASSWORD: ${STRAPI_CLIENT_PASSWORD}
     ports:
       - "${FRONTEND_PORT:-3000}:3000"
     depends_on:

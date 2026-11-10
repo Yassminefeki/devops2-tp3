@@ -1,7 +1,8 @@
 import type { Cours } from "@/lib/cours";
 
 // Mot de passe du client auprès de l'API
-const API_PASSWORD = "Tp3-Cours-2026!";
+// Mot de passe du client auprès de l'API (fourni par l'environnement)
+const API_PASSWORD = process.env.STRAPI_CLIENT_PASSWORD ?? "";
 
 type StrapiCours = Omit<Cours, "topics" | "summary"> & { summary?: string | null; topics?: unknown };
 

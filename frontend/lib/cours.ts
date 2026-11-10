@@ -20,12 +20,18 @@ export const LEVEL_LABELS: Record<Level, string> = {
 
 // 45 → "45 min", 90 → "1 h 30"
 export function formatDuration(minutes: number): string {
-  if (minutes < 60) {
-    return `${minutes} min`;
-  }
   const hours = Math.floor(minutes / 60);
-  const rest = minutes % 60;
-  return rest === 0 ? `${hours} h` : `${hours} h ${rest}`;
+  const remainingMinutes = minutes % 60;
+
+  if (hours > 0 && remainingMinutes === 0) {
+    return `${hours} h`;
+  }
+
+  if (hours > 0) {
+    return `${hours} h ${remainingMinutes}`;
+  }
+
+  return `${minutes} min`;
 }
 
 // Minuscules et sans accents : « Déploiement » et « deploiement » se retrouvent
